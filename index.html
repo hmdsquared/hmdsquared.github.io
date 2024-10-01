@@ -1,14 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMD2: Environment-aware Motion Generation from Single Egocentric
+  <meta charset="utf-8">
+  <meta name="description"
+        content="HMD^2: Environment-aware Motion Generation from Single Egocentric
+Head-Mounted Device">
+  <meta name="keywords" content="HMD2, HMD^2, ego-centric, diffusion models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HMD²: Environment-aware Motion Generation from Single Egocentric
 Head-Mounted Device</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
-    <h1>HMD2: Environment-aware Motion Generation from Single Egocentric
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HMD<sup>2</sup>: Environment-aware Motion Generation from Single Egocentric
 Head-Mounted Device</h1>
-    <p></p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://vguzov.github.io">Vladimir Guzov</a>*<sup> ‡ 1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://cs.stanford.edu/~yifengj/">Yifeng Jiang</a>*<sup> † 3</sup>,</span>
+            <span class="author-block">
+              <a href="https://hongfz16.github.io">Fangzhou Hong</a><sup>‡ 4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://virtualhumans.mpi-inf.mpg.de">Gerard Pons-Moll</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.co.uk/citations?user=MhowvPkAAAAJ&hl=en">Richard Newcombe</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://tml.stanford.edu">C. Karen Liu</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yutingye.info">Yuting Ye</a><sup>5</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.nl/citations?user=eUAgpwkAAAAJ&hl=en">Lingni Ma</a><sup>5</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tübingen AI Center, University of Tübingen,</span>
+            <span class="author-block"><sup>2</sup>Max Planck Institute for Informatics, Saarland Informatics Campus</span>
+            <span class="author-block"><sup>3</sup>Stanford University</span>
+            <span class="author-block"><sup>4</sup>Nanyang Technological University</span>
+            <span class="author-block"><sup>5</sup>Meta Reality Labs Research</span>
+            <span class="inline-footer"><sup>*</sup>Equal contribution</span>
+            <span class="inline-footer"><sup>‡</sup>Work done during internships at Meta Reality Labs Research</span>
+            <span class="inline-footer"><sup>†</sup>Work done partially during internship at Meta Reality Labs Research</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2409.13426"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.13426"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/8PrTj5CeA8Q"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming soon)</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/teaser.jpg" alt="Teaser figure.">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">HMD<sup>2</sup></span> generates full human-body motion from a single head-mounted device.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This paper investigates the online generation of realistic full-body human motion using a
+            single head-mounted device with an outward-facing color camera and the ability to perform
+            visual SLAM. Given the inherent ambiguity of this setup, we introduce a novel system,
+            HMD<sup>2</sup>, designed to balance between motion reconstruction and generation.
+            </p>
+          <p>
+            From a reconstruction standpoint, our system aims to maximally utilize
+            the camera streams to produce both analytical and learned features,
+            including head motion, SLAM point cloud, and image embeddings.
+            On the generative front, HMD<sup>2</sup> employs a multi-modal conditional motion Diffusion model,
+            incorporating a time-series backbone to maintain temporal coherence in generated motions,
+            and utilizes autoregressive in-painting to facilitate online motion inference with minimal
+            latency (0.17 seconds). Collectively, we demonstrate that our system offers a highly
+            effective and robust solution capable of scaling to an extensive dataset of over 200
+            hours collected in a wide range of complex indoor and outdoor environments using publicly
+            available smart glasses.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/8PrTj5CeA8Q?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@inproceedings{guzov-jiang2024hmd2,
+  title = {HMD^2: Environment-aware Motion Generation from Single Egocentric Head-Mounted Device},
+  author = {Guzov, Vladimir and Jiang, Yifeng and Hong, Fangzhou and Pons-Moll, Gerard and Newcombe, Richard and Liu, C. Karen and Ye, Yuting and Ma, Lingni},
+  booktitle = {Arxiv},
+  year = {2024},
+  month = sep,
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based on the <a
+              href="https://nerfies.github.io">Nerfies website</a> and licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
