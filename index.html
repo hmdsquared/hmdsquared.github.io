@@ -138,7 +138,7 @@ Head-Mounted Device</h1>
     <div class="hero-body">
       <img id="teaser" src="./static/images/teaser.jpg" alt="Teaser figure.">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">HMD<sup>2</sup></span> generates full human-body motion from a single head-mounted device.
+        <span class="dnerf">HMD<sup>2</sup></span> generates full human-body motion from a single head-mounted device equipped with an outward-facing camera in complex and diverse environments.
       </h2>
     </div>
   </div>
@@ -189,6 +189,152 @@ Head-Mounted Device</h1>
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop is-centered has-text-centered">
+
+    <h2 class="title is-3">System Overview</h2>
+    <p class="content has-text-justified">
+      Our system, HMD<sup>2</sup>, generates realistic full-body motion that aligns with the signals from a single head-mounted device. Using the image streams from the ego-centric camera and head trajectory with the feature cloud from the onboard SLAM system, we employ a diffusion-based framework to generate the wearer's full-body motion.
+    </p>
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <video id="tripped" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/overview.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="content">
+          <img id="method" src="./static/images/method.png" alt="Method figure.">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="columns is-centered"><div class="column"> </div> </div>
+    <div class="columns is-centered"><div class="column"> </div> </div>
+    <div class="columns is-centered"><div class="column"> </div> </div>
+
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <h3 class="title is-3">Results from Unseen Environments and Subjects</h3>
+
+      <div class="columns is-centered">
+
+        <!-- Stairs. -->
+        <div class="column">
+          <div class="content">
+            <video id="drag" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/stairs.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!--/ Stairs. -->
+
+        <!-- furniture. -->
+        <div class="column">
+          <div class="content">
+            <video id="balls" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/furniture.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <!-- furniture. -->
+
+      </div>
+    </div>
+
+    <div class="columns is-centered"><div class="column"> </div> </div>
+
+
+    <div class="columns is-centered">
+
+      <!-- hike -->
+      <div class="column">
+        <div class="content">
+          <video id="stiff" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/hike.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ hike -->
+
+      <!-- soccer -->
+      <div class="column">
+        <div class="content">
+          <video id="flip" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/soccer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ soccer -->
+
+    </div>
+
+
+    <div class="columns is-centered"><div class="column"> </div> </div>
+    <div class="columns is-centered"><div class="column"> </div> </div>
+    <div class="columns is-centered"><div class="column"> </div> </div>
+
+    <!-- abla. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Effectiveness of Image and Point Cloud Conditions</h2>
+
+        <div class="content has-text-centered">
+          <video id="two-char"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/ablation.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+    <!--/ abla. -->
+
+    <div class="columns is-centered"><div class="column"> </div> </div>
+    <div class="columns is-centered"><div class="column"> </div> </div>
+    <div class="columns is-centered"><div class="column"> </div> </div>
+
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <h3 class="title is-3">Diverse Generation with Underspecified Input</h3>
+
+      <div class="columns is-centered">
+
+        <div class="column">
+          <div class="content">
+            <video id="d1" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/diversity-1.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="content">
+            <video id="d2" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/diversity-2.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
